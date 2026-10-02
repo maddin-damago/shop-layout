@@ -1,0 +1,92 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 820px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header div {
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin-left: 2rem;
+}
+
+main {
+  width: 100vw;
+}
+
+h2 {
+  font-size: 16px;
+  color: rgb(115, 115, 115);
+}
+
+h3 {
+  font-size: 14px;
+  color: rgb(115, 115, 115);
+}
+
+.desc {
+  font-size: 12px;
+  color: rgb(119, 119, 119);
+}
+
+.wide {
+  width: 800px;
+  margin: 1rem auto;
+}
+
+.wide-pic {
+  margin: auto;
+  width: 790px;
+}
+
+.wide-desc {
+  width: 790px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-pics {
+  width: 800px;
+  display: grid;
+  margin: 1rem auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.small-pic {
+  width: 250px;
+}
+
+.narrow-desc {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  width: 790px;
+  display: grid;
+  grid-template-columns: 300px 150px 250px 150px;
+  margin: 3rem auto;
+  font-size: 12px;
+  color: rgb(115, 115, 115);
+}
+
+footer p {
+  margin: 4rem 0;
+}
