@@ -19,7 +19,7 @@ header div {
   font-weight: bold;
 }
 
-nav a {
+a {
   text-decoration: none;
   color: black;
   margin-left: 2rem;
@@ -89,4 +89,127 @@ footer {
 
 footer p {
   margin: 4rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 400px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #meny {
+    background: #333333cc;
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10, 2, 3, 1);
+    transform: translateX(20rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+  #mobile-nav {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  #mobile-nav a {
+    color: white;
+  }
+
+  #menyAvPaa {
+    display: none;
+  }
+
+  #menyAvPaa:checked ~ #meny {
+    transform: translateX(0rem);
+  }
+
+  #burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  #burger > div {
+    height: 2px;
+    background-color: #000;
+    transition: 0.5s;
+    z-index: 999;
+  }
+
+  #menyAvPaa:checked ~ #burger > div {
+    background-color: #fff;
+  }
+
+  #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+
+  .wide {
+    width: 350px;
+  }
+
+  .wide-pic,
+  .wide-desc {
+    width: 350px;
+  }
+
+  .three-pics {
+    width: 400px;
+    grid-template-columns: 1fr;
+  }
+
+  .small-pic {
+    width: 300px;
+  }
+
+  .narrow-desc {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .narrow-desc > div {
+    width: 150px;
+  }
+
+  .narrow-desc > h3 {
+    width: 150px;
+    text-align: right;
+  }
+
+  .three-pics div {
+    margin: auto;
+  }
+
+  footer {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer p {
+    margin: 1rem auto;
+  }
 }
